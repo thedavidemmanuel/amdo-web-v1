@@ -11,8 +11,8 @@ export default function Header() {
           <Image 
             src="/Amdo Initiative logo.png"
             alt="Amdo Initiative Logo"
-            width={60}
-            height={60}
+            width={100}
+            height={0}
             className="object-contain"
           />
         </div>
