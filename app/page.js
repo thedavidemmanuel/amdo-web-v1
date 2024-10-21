@@ -42,36 +42,38 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="w-1/2 relative h-[500px]">
+        <div className="w-1/2 relative h-[700px]">
           <Image 
-            src="/image.png?height=300&width=300" 
-            alt="Community member" 
-            width={300} 
-            height={300} 
-            className="absolute top-0 left-0 rounded-full object-cover"
+            src="/hero-image-1.svg"
+            alt="Community member 1"
+            width={250}
+            height={250}
+            className="absolute left-0 top-0 rounded-full object-cover"
+            style={{ left: '0px', top: '0px' }}
           />
           <Image 
-            src="/image2.png
-            ?height=200&width=200" 
-            alt="Community member" 
-            width={200} 
-            height={200} 
-            className="absolute top-0 right-0 rounded-full object-cover"
+            src="/hero-image-2.svg"
+            alt="Community member 2"
+            width={200}
+            height={200}
+            className="absolute rounded-full object-cover"
+            style={{ left: '263px', top: '-36px' }}
           />
           <Image 
-            src="/image3.png
-            ?height=250&width=250" 
-            alt="Community member" 
-            width={250} 
-            height={250} 
-            className="absolute bottom-0 left-1/4 rounded-full object-cover"
+            src="/hero-image-3.svg"
+            alt="Community member 3"
+            width={200}
+            height={200}
+            className="absolute rounded-full object-cover"
+            style={{ left: '406px', top: '150px' }}
           />
           <Image 
-            src="/image4.png?height=180&width=180" 
-            alt="Community member" 
-            width={180} 
-            height={180} 
-            className="absolute bottom-1/3 right-1/4 rounded-full object-cover"
+            src="/hero-image-4.svg"
+            alt="Community member 4"
+            width={250}
+            height={250}
+            className="absolute rounded-full object-cover"
+            style={{ left: '118px', top: '237px' }}
           />
         </div>
       </main>
