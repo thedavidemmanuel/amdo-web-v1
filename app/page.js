@@ -2,32 +2,22 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Header from './components/header'
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gray-900" />
-          <span className="font-bold text-sm">The Amdo Initiative</span>
-        </div>
-        <nav>
-          <ul className="flex space-x-6 text-sm">
-            {['Home', 'About Us', 'Programs', 'Blog', 'Join Us', 'Contact Us'].map((item) => (
-              <li key={item}>
-                <Link href="#" className="text-gray-800 hover:text-gray-600">
-                  {item}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link href="#" className="bg-blue-900 text-white px-4 py-2 rounded text-sm hover:bg-blue-800">
-                Donate
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
+
+      <Header />
 
       <main className="container mx-auto px-4 py-12 flex">
         <div className="w-1/2 pr-12">
@@ -50,32 +40,32 @@ export default function HomePage() {
             alt="Community member 1"
             width={250}
             height={250}
-            className="absolute left-0 top-0 rounded-full object-cover"
-            style={{ left: '0px', top: '0px' }}
+            className="absolute left-0 top-0 rounded-full object-cover float-animation"
+            style={{ left: '0px', top: '0px', animationDelay: '0s' }}
           />
           <Image 
             src="/hero-image-2.svg"
             alt="Community member 2"
             width={200}
             height={200}
-            className="absolute rounded-full object-cover"
-            style={{ left: '263px', top: '-36px' }}
+            className="absolute rounded-full object-cover float-animation"
+            style={{ left: '263px', top: '-36px', animationDelay: '0.5s' }}
           />
           <Image 
             src="/hero-image-3.svg"
             alt="Community member 3"
             width={200}
             height={200}
-            className="absolute rounded-full object-cover"
-            style={{ left: '406px', top: '150px' }}
+            className="absolute rounded-full object-cover float-animation"
+            style={{ left: '406px', top: '150px', animationDelay: '1s' }}
           />
           <Image 
             src="/hero-image-4.svg"
             alt="Community member 4"
             width={250}
             height={250}
-            className="absolute rounded-full object-cover"
-            style={{ left: '118px', top: '237px' }}
+            className="absolute rounded-full object-cover float-animation"
+            style={{ left: '118px', top: '237px', animationDelay: '1.5s' }}
           />
         </div>
       </main>
