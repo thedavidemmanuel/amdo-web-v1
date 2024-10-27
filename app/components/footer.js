@@ -69,7 +69,7 @@ export default function Footer() {
                 Phone: +234 123 456 7890
               </li>
               <li className="text-gray-600 text-sm font-light">
-                Address: Lagos, Nigeria
+                Address: Gombe, Nigeria
               </li>
             </ul>
             {/* Social Media Links */}

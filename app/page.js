@@ -94,7 +94,7 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* Stats Section - Adjusted positioning and spacing */}
+      {/* Stats Section */}
       <div className="container mx-auto px-4 mt-96 mb-20">
         <div className="flex justify-between items-center bg-white max-w-5xl mx-auto">
           <div className="flex flex-col items-center px-4">
