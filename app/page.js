@@ -60,7 +60,7 @@ export default function HomePage() {
         
         <div className="w-1/2 absolute right-0 top-12 h-[700px]">
           <Image 
-            src="/hero-image-1.svg"
+            src="/hero-image-1.png"
             alt="Community member 1"
             width={250}
             height={250}
@@ -68,7 +68,7 @@ export default function HomePage() {
             style={{ left: '0px', top: '0px', animationDelay: '0s' }}
           />
           <Image 
-            src="/hero-image-2.svg"
+            src="/hero-image-2.png"
             alt="Community member 2"
             width={200}
             height={200}
@@ -76,7 +76,7 @@ export default function HomePage() {
             style={{ left: '263px', top: '-36px', animationDelay: '0.5s' }}
           />
           <Image 
-            src="/hero-image-3.svg"
+            src="/hero-image-3.png"
             alt="Community member 3"
             width={200}
             height={200}
@@ -84,7 +84,7 @@ export default function HomePage() {
             style={{ left: '406px', top: '150px', animationDelay: '1s' }}
           />
           <Image 
-            src="/hero-image-4.svg"
+            src="/hero-image-4.png"
             alt="Community member 4"
             width={250}
             height={250}
