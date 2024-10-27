@@ -35,7 +35,7 @@ export default function Header() {
           ))}
           <Link 
             href="#" 
-            className="bg-[#123456] text-white px-6 py-2 rounded-md font-medium text-lg hover:bg-opacity-90"
+            className="bg-[#2B9348] text-white px-6 py-2 rounded-md font-medium text-lg hover:bg-opacity-90"
           >
             Donate
           </Link>
