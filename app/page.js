@@ -178,23 +178,24 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <div className="container mx-auto px-4 mt-12 mb-20">
-        <div className="flex flex-col md:flex-row justify-between items-center bg-white max-w-5xl mx-auto">
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 bg-white max-w-5xl mx-auto">
+          
+          <div className="flex flex-col items-center p-4">
             <p className="text-3xl font-normal mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
             <p className="text-lg text-black">Fund Raised</p>
           </div>
-          <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+
+          
+          <div className="flex flex-col items-center p-4">
+            
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="50" />+</p>
             <p className="text-lg text-black">Volunteers</p>
           </div>
-          <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+          <div className="flex flex-col items-center p-4">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="100" /></p>
             <p className="text-lg text-black">Scholarships</p>
           </div>
-          <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+          <div className="flex flex-col items-center p-4">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="24" /></p>
             <p className="text-lg text-black">Workshops</p>
           </div>
