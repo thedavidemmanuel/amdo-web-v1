@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className="w-full py-4 px-6 bg-white relative z-50">
       <div className="max-w-7xl mx-auto">
-        {/* Desktop Navigation */}
+        {/* esktop Navigation */}
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Image 
@@ -32,7 +32,7 @@ export default function Header() {
             />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* mobile menu*/}
           <button 
             className="lg:hidden text-black p-2 hover:bg-gray-100 rounded-lg"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,7 +44,6 @@ export default function Header() {
             )}
           </button>
 
-          {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link 
@@ -64,7 +63,7 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Mobile Menu */}
+        {/* mobile menu */}
         <div 
           className={`lg:hidden fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'

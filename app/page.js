@@ -27,16 +27,14 @@ function AnimatedNumber({ value }) {
 
 import { ArrowUpRight } from 'lucide-react';
 
-// Reusable Work Card Component
 const WorkCard = ({ icon, title, description }) => (
-  <div className="bg-[#1B1B3A] p-8 rounded-lg">
-    <div className="mb-4 text-3xl">{icon}</div>
+  <div className="bg-[#1B1B3A] p-20 rounded-lg">
+    <div className="mb-8 text-8xl ">{icon}</div>
     <h3 className="text-white text-xl font-medium mb-3">{title}</h3>
     <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
   </div>
 );
 
-// Reusable Blog Card Component
 const BlogCard = ({ image, title, description }) => (
   <div className="group cursor-pointer">
     <div className="relative overflow-hidden rounded-lg mb-4">
@@ -234,11 +232,13 @@ export default function HomePage() {
             <ArrowUpRight className="w-5 h-5 ml-1" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-[400px] font-bold ">
           {workItems.map((item, index) => (
             <WorkCard key={index} {...item} />
           ))}
         </div>
+        <div className='mt-20' /> 
+
       </section>
 
       {/* Join Initiative Section */}
