@@ -26,6 +26,7 @@ function AnimatedNumber({ value }) {
 }
 
 import { ArrowUpRight } from 'lucide-react';
+import { ContactForm } from '@/components/contact-form';
 
 const WorkCard = ({ icon, title, description }) => (
   <div className="bg-[#1B1B3A] p-20 rounded-lg">
@@ -254,7 +255,12 @@ export default function HomePage() {
                 who is already engaged in their community and will give back and perpetuate the
                 shared outcomes and goals of the Foundation for their fellows.
               </p>
-              <button className="bg-[#2B9348] text-white px-8 py-3 rounded-lg hover:bg-[#228B22] transition-colors duration-300">
+              <button className="bg-[#2B9348] text-white px-8 py-3 rounded-lg hover:bg-[#228B22] transition-colors duration-300" 
+              onClick={() => {
+                window.location.href = 'https://forms.gle/H94wBpX3GSZUZiHB9';
+              }}
+              
+              >
                 Apply Now
               </button>
             </div>
@@ -283,6 +289,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <ContactForm />
+
 
       <Footer />
     </div>
