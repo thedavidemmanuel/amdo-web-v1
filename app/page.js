@@ -110,13 +110,6 @@ export default function HomePage() {
         .float-animation {
           animation: float 3s ease-in-out infinite;
         }
-        @keyframes slide {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-slide {
-          animation: slide 0.5s ease forwards;
-        }
       `}</style>
 
       <Header />
@@ -139,7 +132,6 @@ export default function HomePage() {
           </div>
         </div>
         <div className='mt-20' />        
-        
         <div className="lg:w-1/2 relative flex flex-wrap justify-center">
           <div className="w-1/2 p-1">
             <Image 
@@ -186,23 +178,23 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <div className="container mx-auto px-4 mt-12 mb-20">
-        <div className="flex flex-col md:flex-row justify-between items-center bg-white max-w-5xl mx-auto overflow-hidden">
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
+        <div className="flex flex-col md:flex-row justify-between items-center bg-white max-w-5xl mx-auto">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
             <p className="text-3xl font-normal mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
             <p className="text-lg text-black">Fund Raised</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="50" />+</p>
             <p className="text-lg text-black">Volunteers</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="100" /></p>
             <p className="text-lg text-black">Scholarships</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="24" /></p>
             <p className="text-lg text-black">Workshops</p>
           </div>
@@ -249,13 +241,12 @@ export default function HomePage() {
             <ArrowUpRight className="w-5 h-5 ml-1" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-[400px] font-bold ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden">
           {workItems.map((item, index) => (
             <WorkCard key={index} {...item} />
           ))}
         </div>
         <div className='mt-20' /> 
-
       </section>
 
       {/* Join Initiative Section */}
@@ -299,7 +290,7 @@ export default function HomePage() {
           <p className="text-[#F9A602] text-md font-medium mb-2">Blog</p>
           <h2 className="text-3xl text-black font-medium">Stay updated with us</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-[400px] overflow-hidden text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 overflow-hidden text-black">
           {blogPosts.map((post, index) => (
             <BlogCard key={index} {...post} />
           ))}
