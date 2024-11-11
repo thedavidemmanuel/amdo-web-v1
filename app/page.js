@@ -110,6 +110,13 @@ export default function HomePage() {
         .float-animation {
           animation: float 3s ease-in-out infinite;
         }
+        @keyframes slide {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(0); }
+        }
+        .animate-slide {
+          animation: slide 0.5s ease forwards;
+        }
       `}</style>
 
       <Header />
@@ -131,70 +138,71 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+        <div className='mt-20' />        
         
-        <div className="lg:w-1/2 relative flex justify-center items-center flex-wrap">
-          <Image 
-            src="/hero-image-1.png"
-            alt="Community member 1"
-            width={250}
-            height={250}
-            className="rounded-full object-cover float-animation hidden sm:block"
-            style={{ animationDelay: '0s' }}
-          />
-          <Image 
-            src="/hero-image-2.png"
-            alt="Community member 2"
-            width={200}
-            height={200}
-            className="rounded-full object-cover float-animation hidden sm:block"
-            style={{ animationDelay: '0.5s' }}
-          />
-          <Image 
-            src="/hero-image-3.png"
-            alt="Community member 3"
-            width={200}
-            height={200}
-            className="rounded-full object-cover float-animation hidden sm:block"
-            style={{ animationDelay: '1s' }}
-          />
-          <Image 
-            src="/hero-image-4.png"
-            alt="Community member 4"
-            width={250}
-            height={250}
-            className="rounded-full object-cover float-animation hidden sm:block"
-            style={{ animationDelay: '1.5s' }}
-          />
-          <Image 
-            src="/hero-image-1.png"
-            alt="Community member 1"
-            width={250}
-            height={250}
-            className="rounded-full object-cover float-animation sm:hidden"
-            style={{ animationDelay: '0s' }}
-          />
+        <div className="lg:w-1/2 relative flex flex-wrap justify-center">
+          <div className="w-1/2 p-1">
+            <Image 
+              src="/hero-image-1.png"
+              alt="Community member 1"
+              width={150}  
+              height={150} 
+              className="rounded-full object-cover float-animation"
+              style={{ animationDelay: '0s' }}
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <Image 
+              src="/hero-image-2.png"
+              alt="Community member 2"
+              width={180} 
+              height={180} 
+              className="rounded-full object-cover float-animation"
+              style={{ animationDelay: '0.5s' }}
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <Image 
+              src="/hero-image-3.png"
+              alt="Community member 3"
+              width={180}  
+              height={180}
+              className="rounded-full object-cover float-animation"
+              style={{ animationDelay: '1s' }}
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <Image 
+              src="/hero-image-4.png"
+              alt="Community member 4"
+              width={150} 
+              height={150} 
+              className="rounded-full object-cover float-animation"
+              style={{ animationDelay: '1.5s' }}
+            />
+          </div>
         </div>
       </main>
 
       {/* Stats Section */}
       <div className="container mx-auto px-4 mt-12 mb-20">
-        <div className="flex flex-col md:flex-row justify-between items-center bg-white max-w-5xl mx-auto">
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center bg-white max-w-5xl mx-auto overflow-hidden">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
             <p className="text-3xl font-normal mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
             <p className="text-lg text-black">Fund Raised</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="50" />+</p>
             <p className="text-lg text-black">Volunteers</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="100" /></p>
             <p className="text-lg text-black">Scholarships</p>
           </div>
           <div className="w-4 h-4 bg-[#F9A602] rounded-full"></div>
-          <div className="flex flex-col items-center px-4 mb-4 md:mb-0">
+          <div className="flex flex-col items-center px-4 mb-4 md:mb-0 animate-slide">
             <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="24" /></p>
             <p className="text-lg text-black">Workshops</p>
           </div>
@@ -241,7 +249,7 @@ export default function HomePage() {
             <ArrowUpRight className="w-5 h-5 ml-1" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-auto font-bold overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-[400px] font-bold ">
           {workItems.map((item, index) => (
             <WorkCard key={index} {...item} />
           ))}
@@ -291,7 +299,7 @@ export default function HomePage() {
           <p className="text-[#F9A602] text-md font-medium mb-2">Blog</p>
           <h2 className="text-3xl text-black font-medium">Stay updated with us</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-auto overflow-hidden text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-[400px] overflow-hidden text-black">
           {blogPosts.map((post, index) => (
             <BlogCard key={index} {...post} />
           ))}
