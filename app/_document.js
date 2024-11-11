@@ -15,8 +15,8 @@ export default function Document() {
         <meta property="og:title" content="The Amdo Initiative" />
         <meta property="og:description" content="Empowering our community by developing its people, creating opportunities, and building lasting solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.amdoinitiative.org" /> {/* Replace with your actual URL */}
-        <meta property="og:image" content="https://www.amdoinitiative.org/og-image.jpg" /> {/* Replace with your actual image URL */}
+        <meta property="og:url" content="https://www.amdoinitiative.org" /> 
+        <meta property="og:image" content="https://www.amdoinitiative.org/og-image.jpg" /> 
 
         {/* Twitter Card meta tags */}
         <meta name="twitter:card" content="summary_large_image" />

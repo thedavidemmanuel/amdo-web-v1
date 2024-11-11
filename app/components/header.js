@@ -18,23 +18,24 @@ export default function Header() {
         </div>
         <nav className="flex items-center space-x-6">
           {[
-            'Home',
-            'About Us',
-            'Programs',
-            'Blog',
-            'Join Us',
-            'Contact Us',
+            { name: 'Home', href: '/' },
+            { name: 'About Us', href: '/about-us' },
+            { name: 'Programs', href: '/programs' },
+            { name: 'Blog', href: '/blog' },
+            { name: 'Join Us', href: '/join-us' },
+            { name: 'Contact Us', href: '/contact-us' },
           ].map((item) => (
             <Link 
-              key={item} 
-              href="#" 
+              key={item.name} 
+              href={item.href} 
+
               className="text-black font-medium text-lg hover:text-gray-600"
             >
-              {item}
+              {item.name}
             </Link>
           ))}
           <Link 
-            href="#" 
+            href="/donate" 
             className="bg-[#2B9348] text-white px-6 py-2 rounded-md font-medium text-lg hover:bg-opacity-90"
           >
             Donate
