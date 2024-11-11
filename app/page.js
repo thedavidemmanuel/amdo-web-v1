@@ -195,7 +195,7 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 lg:pr-12">
-            <h1 className="text-5xl font-medium mb-6 leading-tight">
+            <h1 className="text-5xl text-black font-medium mb-6 leading-tight">
               About <span className="text-[#2B9348]">Amdo Initiative</span>
             </h1>
             <p className="text-gray-600 mb-8 max-w-[500px]">
@@ -225,7 +225,7 @@ export default function HomePage() {
         <div className="flex justify-between items-center mb-12">
           <div>
             <p className="text-[#F9A602] text-sm font-medium mb-2">What we do</p>
-            <h2 className="text-3xl font-medium">Our Work</h2>
+            <h2 className="text-3xl text-black font-medium">Our Work</h2>
           </div>
           <Link href="#" className="text-[#2B9348] flex items-center hover:underline">
             Read More
@@ -247,7 +247,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <p className="text-[#F9A602] text-sm font-medium mb-2">Join the Amdo Initiative for Education</p>
-              <h2 className="text-3xl font-medium mb-6">Who can apply?</h2>
+              <h2 className="text-3xl text-black font-medium mb-6">Who can apply?</h2>
               <p className="text-gray-600 mb-8">
                 Recipients will be selected based on financial need, academic performance,
                 leadership potential, curiosity, courage, and character traits indicative of a person
@@ -274,10 +274,10 @@ export default function HomePage() {
       {/* Blog Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-12">
-          <p className="text-[#F9A602] text-sm font-medium mb-2">Blog</p>
-          <h2 className="text-3xl font-medium">Stay updated with us</h2>
+          <p className="text-[#F9A602] text-md font-medium mb-2">Blog</p>
+          <h2 className="text-3xl text-black font-medium">Stay updated with us</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-[400px] overflow-hidden text-black">
           {blogPosts.map((post, index) => (
             <BlogCard key={index} {...post} />
           ))}
