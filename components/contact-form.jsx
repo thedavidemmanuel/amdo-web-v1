@@ -38,7 +38,7 @@ export function ContactForm() {
         <div className="flex-grow flex space-x-2 w-full sm:w-auto">
           <Input 
             type="email" 
-            placeholder="Enter your email"
+            placeholder="Your Email"
             className="flex-grow text-base py-2"
           />
           <Button className="bg-[#55A555] hover:bg-[#458545] text-white px-8 py-2 text-base rounded-full whitespace-nowrap">
