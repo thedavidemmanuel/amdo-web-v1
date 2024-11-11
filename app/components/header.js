@@ -83,7 +83,7 @@ export default function Header() {
             ))}
             <Link 
               href="/donate" 
-              className="bg-[#2B9348] text-white px-6 py-2 rounded-md font-medium text-lg hover:bg-opacity-90 transition-colors duration-200 text-center"
+              className="bg-[#2B9348] text-white px-4 py-1 rounded-md font-medium text-lg hover:bg-opacity-90 transition-colors duration-200 text-center mx-auto"
               onClick={() => setIsMenuOpen(false)}
             >
               Donate
