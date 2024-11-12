@@ -3,6 +3,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -13,6 +14,12 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+
+export const metadata = {
+  title: "The Amdo Initiative",
+  description: "Empowering our community by developing its people, creating opportunities, and building lasting solutions.",
+};
 
 export default function RootLayout({ children }) {
   return (
