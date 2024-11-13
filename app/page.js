@@ -114,93 +114,172 @@ export default function HomePage() {
 
       <Header />
 
-      <main className="container mx-auto px-4 py-12 relative flex flex-col lg:flex-row">
+      <main className="container mx-auto px-4 py-12 relative">
+        <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 pr-12 mt-39">
-          <h1 className="text-5xl font-medium mb-6 leading-tight text-black">
-            Building For <span className="text-black">Everyone</span>
-          </h1>
-          <p className="text-base text-black mb-8 max-w-[500px]">
-            Empowering our community by developing its people, creating opportunities, and building lasting solutions that uplift every individual. Together, we shape a future where no one is left behind.
-          </p>
-          <div className="space-x-16">
-            <Link href="#" className="bg-white text-black px-6 py-3 rounded-lg border border-black text-xxl font-normal hover:bg-gray-100 transition-colors duration-300">
-              Learn More
-            </Link>
-            <Link href="#" className="bg-[#2B9348] text-white px-6 py-3 rounded-lg text-xl font-normal hover:bg-[#228B22] transition-colors duration-300">
-              Donate
-            </Link>
-          </div>
+        <h1 className="text-5xl font-medium mb-6 leading-tight text-black">
+          <span className="block">Building For</span>
+          <span className="block font-bold mt-2">Everyone</span>
+        </h1>
+        <p className="text-base text-black mb-8 max-w-[500px]">
+          Empowering our community by developing its people, creating opportunities, and building lasting solutions that uplift every individual. Together, we shape a future where no one is left behind.
+        </p>
+        <div className="space-x-4"> {/* Reduced from space-x-16 to space-x-4 */}
+          <Link href="#" className="bg-white text-black px-6 py-3 rounded-lg border border-black text-xxl font-normal hover:bg-gray-100 transition-colors duration-300">
+            Learn More
+          </Link>
+          <Link href="#" className="bg-[#2B9348] text-white px-6 py-3 rounded-lg text-xl font-normal hover:bg-[#228B22] transition-colors duration-300">
+            Donate
+          </Link>
         </div>
-        <div className='mt-20' />        
-        <div className="lg:w-1/2 relative flex flex-wrap justify-center">
-          <div className="w-1/2 p-1">
+      </div>
+
+          {/* Desktop Layout - Absolute Positioning */}
+          <div className="hidden lg:block w-1/2 absolute right-0 top-12 h-[700px]">
             <Image 
-              src="/hero-image-1.png"
+              src="/hero-image-1.svg"
               alt="Community member 1"
-              width={150}  
-              height={150} 
-              className="rounded-full object-cover float-animation"
-              style={{ animationDelay: '0s' }}
+              width={250}
+              height={250}
+              className="absolute rounded-full object-cover float-animation"
+              style={{ left: '0px', top: '0px', animationDelay: '0s' }}
             />
-          </div>
-          <div className="w-1/2 p-1">
             <Image 
-              src="/hero-image-2.png"
+              src="/hero-image-2.svg"
               alt="Community member 2"
-              width={180} 
-              height={180} 
-              className="rounded-full object-cover float-animation"
-              style={{ animationDelay: '0.5s' }}
+              width={200}
+              height={200}
+              className="absolute rounded-full object-cover float-animation"
+              style={{ left: '263px', top: '-36px', animationDelay: '0.5s' }}
             />
-          </div>
-          <div className="w-1/2 p-1">
             <Image 
-              src="/hero-image-3.png"
+              src="/hero-image-3.svg"
               alt="Community member 3"
-              width={180}  
-              height={180}
-              className="rounded-full object-cover float-animation"
-              style={{ animationDelay: '1s' }}
+              width={200}
+              height={200}
+              className="absolute rounded-full object-cover float-animation"
+              style={{ left: '406px', top: '150px', animationDelay: '1s' }}
+            />
+            <Image 
+              src="/hero-image-4.svg"
+              alt="Community member 4"
+              width={250}
+              height={250}
+              className="absolute rounded-full object-cover float-animation"
+              style={{ left: '118px', top: '237px', animationDelay: '1.5s' }}
             />
           </div>
-          <div className="w-1/2 p-1">
-            <Image 
-              src="/hero-image-4.png"
-              alt="Community member 4"
-              width={150} 
-              height={150} 
-              className="rounded-full object-cover float-animation"
-              style={{ animationDelay: '1.5s' }}
-            />
+
+          {/* Mobile/Tablet Layout - Grid */}
+          <div className="lg:hidden w-full mt-12 relative flex flex-wrap justify-center">
+            <div className="w-1/2 p-1">
+              <Image 
+                src="/hero-image-1.png"
+                alt="Community member 1"
+                width={150}
+                height={150}
+                className="rounded-full object-cover float-animation"
+                style={{ animationDelay: '0s' }}
+              />
+            </div>
+            <div className="w-1/2 p-1">
+              <Image 
+                src="/hero-image-2.png"
+                alt="Community member 2"
+                width={180}
+                height={180}
+                className="rounded-full object-cover float-animation"
+                style={{ animationDelay: '0.5s' }}
+              />
+            </div>
+            <div className="w-1/2 p-1">
+              <Image 
+                src="/hero-image-3.png"
+                alt="Community member 3"
+                width={180}
+                height={180}
+                className="rounded-full object-cover float-animation"
+                style={{ animationDelay: '1s' }}
+              />
+            </div>
+            <div className="w-1/2 p-1">
+              <Image 
+                src="/hero-image-4.png"
+                alt="Community member 4"
+                width={150}
+                height={150}
+                className="rounded-full object-cover float-animation"
+                style={{ animationDelay: '1.5s' }}
+              />
+            </div>
           </div>
         </div>
       </main>
 
-      {/* Stats Section */}
-      <div className="container mx-auto px-4 mt-12 mb-20">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 bg-white max-w-5xl mx-auto">
-          
-          <div className="flex flex-col items-center p-4">
-            <p className="text-3xl font-normal mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
-            <p className="text-lg text-black">Fund Raised</p>
+    {/* Stats Section */}
+    <div className="container mx-auto px-4 mt-12 lg:mt-64 mb-20">
+        <div className="md:flex md:flex-row justify-between items-center bg-white max-w-5xl mx-auto">
+          {/* Mobile Layout - First Row */}
+          <div className="grid grid-cols-3 gap-2 items-center mb-8 md:hidden">
+            <div className="flex flex-col items-center p-4 col-span-1">
+              <p className="text-3xl font-medium mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
+              <p className="text-lg text-[#4B4B4B]">Fund Raised</p>
+            </div>
+            
+            <div className="w-3 h-3 bg-[#F9A602] rounded-full justify-self-center"></div>
+            
+            <div className="flex flex-col items-center p-4 col-span-1">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="50" />+</p>
+              <p className="text-lg text-[#4B4B4B]">Volunteers</p>
+            </div>
           </div>
 
-          
-          <div className="flex flex-col items-center p-4">
+          {/* Mobile Layout - Second Row */}
+          <div className="grid grid-cols-3 gap-2 items-center md:hidden">
+            <div className="flex flex-col items-center p-4 col-span-1">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="100" /></p>
+              <p className="text-lg text-[#4B4B4B]">Scholarships</p>
+            </div>
             
-            <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="50" />+</p>
-            <p className="text-lg text-black">Volunteers</p>
+            <div className="w-3 h-3 bg-[#F9A602] rounded-full justify-self-center"></div>
+            
+            <div className="flex flex-col items-center p-4 col-span-1">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="24" /></p>
+              <p className="text-lg text-[#4B4B4B]">Workshops</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center p-4">
-            <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="100" /></p>
-            <p className="text-lg text-black">Scholarships</p>
-          </div>
-          <div className="flex flex-col items-center p-4">
-            <p className="text-3xl font-normal mb-2 text-black"><AnimatedNumber value="24" /></p>
-            <p className="text-lg text-black">Workshops</p>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex md:flex-row md:justify-between md:items-center md:w-full">
+            <div className="flex flex-col items-center p-4">
+              <p className="text-3xl font-medium mb-2 text-black">₦<AnimatedNumber value="500000" />+</p>
+              <p className="text-lg text-[#4B4B4B]">Fund Raised</p>
+            </div>
+
+            <div className="w-3 h-3 bg-[#F9A602] rounded-full"></div>
+            
+            <div className="flex flex-col items-center p-4">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="50" />+</p>
+              <p className="text-lg text-[#4B4B4B]">Volunteers</p>
+            </div>
+
+            <div className="w-3 h-3 bg-[#F9A602] rounded-full"></div>
+            
+            <div className="flex flex-col items-center p-4">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="100" /></p>
+              <p className="text-lg text-[#4B4B4B]">Scholarships</p>
+            </div>
+
+            <div className="w-3 h-3 bg-[#F9A602] rounded-full"></div>
+            
+            <div className="flex flex-col items-center p-4">
+              <p className="text-3xl font-medium mb-2 text-black"><AnimatedNumber value="24" /></p>
+              <p className="text-lg text-[#4B4B4B]">Workshops</p>
+            </div>
           </div>
         </div>
       </div>
+
 
       <section className="container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row items-center">
